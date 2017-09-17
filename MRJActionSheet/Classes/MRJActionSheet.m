@@ -25,7 +25,11 @@
                redButtonIndex:(int)buttonIndex
                      defColor:(NSArray *)indexs
                      delegate:(id<MRJActionSheetDelegate>)delegate{
-    return [self initWithTitle:title titleColor:[UIColor colorWithHexString:@"333333"] buttonTitles:titles redButtonIndex:buttonIndex defColor:indexs delegate:delegate];
+    return [self initWithTitle:title titleColor:[UIColor colorWithHexString:@"333333"] buttonTitles:titles redButtonIndex:buttonIndex defColor:indexs delegate:delegate actionSheetClickBlock:nil];
+}
+
+- (instancetype)initWithTitle:(NSString *)title buttonTitles:(NSArray *)titles redButtonIndex:(int)buttonIndex defColor:(NSArray *)indexs actionSheetClickBlock:(MRJActionSheetBlock)actionSheetClickBlock{
+    return [self initWithTitle:title titleColor:[UIColor colorWithHexString:@"333333"] buttonTitles:titles redButtonIndex:buttonIndex defColor:indexs delegate:nil actionSheetClickBlock:actionSheetClickBlock];
 }
 
 - (instancetype)initWithTitle:(NSString *)title
@@ -33,11 +37,14 @@
                  buttonTitles:(NSArray *)titles
                redButtonIndex:(int)buttonIndex
                      defColor:(NSArray *)indexs
-                     delegate:(id<MRJActionSheetDelegate>)delegate{
+                     delegate:(id<MRJActionSheetDelegate>)delegate
+        actionSheetClickBlock:(MRJActionSheetBlock)actionSheetClickBlock{
     
     if (self = [super init]) {
         
-        _kdelegate = delegate;
+        self.mrjdelegate = delegate;
+        self.mrjActionSheetClickBlock = actionSheetClickBlock;
+        
         
         // 暗黑色的view
         UIView *darkView = [[UIView alloc] init];
@@ -58,7 +65,6 @@
         _bottomView = bottomView;
         
         if (title) {
-            
             // 标题
             UILabel *label = [[UILabel alloc] init];
             label.text = title;
@@ -143,21 +149,19 @@
     return self;
 }
 
-
-
 - (void)didClickBtn:(UIButton *)btn {
-    if ([self.kdelegate respondsToSelector:@selector(actionSheet:didClickedButtonAtIndex:)]) {
-        [self.kdelegate actionSheet:self didClickedButtonAtIndex:(int)btn.tag - 1000];
+    if ([self.mrjdelegate respondsToSelector:@selector(actionSheet:didClickedButtonAtIndex:)]) {
+        [self.mrjdelegate actionSheet:self didClickedButtonAtIndex:(int)btn.tag - 1000];
     }
-    if (self.MRJActionSheetClickedBlock) self.MRJActionSheetClickedBlock(self,(int)btn.tag - 1000);
+    if (self.mrjActionSheetClickBlock) self.mrjActionSheetClickBlock(self,(int)btn.tag - 1000);
     [self dismiss:nil];
 }
 
 - (void)dismiss:(UITapGestureRecognizer *)tap{
     
-    if ([self.kdelegate respondsToSelector:@selector(actionSheetDidCancel:)]
+    if ([self.mrjdelegate respondsToSelector:@selector(actionSheetDidCancel:)]
         && tap) {
-        [self.kdelegate actionSheetDidCancel:self];
+        [self.mrjdelegate actionSheetDidCancel:self];
     }
     
     [UIView animateWithDuration:0.3f
@@ -179,8 +183,8 @@
 }
 
 - (void)didClickCancelBtn{
-    if ([self.kdelegate respondsToSelector:@selector(actionSheetDidCancel:)]){
-        [self.kdelegate actionSheetDidCancel:self];
+    if ([self.mrjdelegate respondsToSelector:@selector(actionSheetDidCancel:)]){
+        [self.mrjdelegate actionSheetDidCancel:self];
     }
     
     [UIView animateWithDuration:0.3f
