@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MRJActionSheet_Example' do
+  pod 'MRJActionSheet', :path => '../'
+
+  target 'MRJActionSheet_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
