@@ -7,7 +7,7 @@
 //
 
 #import "MRJActionSheet.h"
-#import "UIImage+Color.h"
+#import "UIColor+Additions.h"
 
 #define BUTTON_H 48.0f
 
@@ -28,7 +28,7 @@
                      defColor:(NSArray *)indexs
                      delegate:(id<MRJActionSheetDelegate>)delegate
 {
-    return [self initWithTitle:title titleColor:[UIColor KK_Gray33] buttonTitles:titles redButtonIndex:buttonIndex defColor:indexs delegate:delegate];
+    return [self initWithTitle:title titleColor:[UIColor colorWithHexString:@"333333"] buttonTitles:titles redButtonIndex:buttonIndex defColor:indexs delegate:delegate];
 }
 
 - (instancetype)initWithTitle:(NSString *)title
@@ -36,7 +36,7 @@
                  buttonTitles:(NSArray *)titles
                redButtonIndex:(int)buttonIndex
                      defColor:(NSArray *)indexs
-                     delegate:(id<KKActionSheetDelegate>)delegate;
+                     delegate:(id<MRJActionSheetDelegate>)delegate;
 {
     
     if (self = [super init]) {
@@ -46,9 +46,9 @@
         // 暗黑色的view
         UIView *darkView = [[UIView alloc] init];
         darkView.userInteractionEnabled = YES;
-        darkView.backgroundColor = colorWithHexString(@"313131");//LCColor(46, 49, 50);
+        darkView.backgroundColor = [UIColor colorWithHexString:@"313131"];//LCColor(46, 49, 50);
         darkView.alpha = 0;
-        darkView.frame = (CGRect){0, 0, SCREEN_SIZE};
+        darkView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
         [self addSubview:darkView];
         _darkView = darkView;
         
@@ -57,7 +57,7 @@
         
         // 所有按钮的底部view
         UIView *bottomView = [[UIView alloc] init];
-        bottomView.backgroundColor = colorWithHexString(COLOR_BG_MAGIN);//LCColor(242, 242, 242);
+        bottomView.backgroundColor = [UIColor colorWithHexString:@"ff801a"];//LCColor(242, 242, 242);
         [self addSubview:bottomView];
         _bottomView = bottomView;
         
@@ -66,11 +66,11 @@
             // 标题
             UILabel *label = [[UILabel alloc] init];
             label.text = title;
-            label.font = KKShare.font12;
-            label.textColor = colorWithHexString(@"b2b1b1");//LCColor(111, 111, 111);
+            label.font = [UIFont systemFontOfSize:12];
+            label.textColor = [UIColor colorWithHexString:@"b2b1b1"];//LCColor(111, 111, 111);
             label.backgroundColor = [UIColor whiteColor];
             label.textAlignment = NSTextAlignmentCenter;
-            label.frame = CGRectMake(0, 0, SCREEN_SIZE.width, BUTTON_H);
+            label.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, BUTTON_H);
             [bottomView addSubview:label];
         }
         
@@ -85,11 +85,11 @@
                 btn.tag = i + 1000;
                 btn.backgroundColor = [UIColor whiteColor];
                  [btn.titleLabel setTextAlignment:NSTextAlignmentCenter];
-                btn.titleLabel.font = KKShare.font16;
+                btn.titleLabel.font = [UIFont systemFontOfSize:17];
                 [btn setTitle:titles[i] forState:UIControlStateNormal];
                 UIColor *cuTitleColor = nil;
                 if (i == buttonIndex) {
-                    cuTitleColor = [UIColor KK_Red];//colorWithHexString(@"ff0a0a");//LCColor(255, 10, 10);
+                    cuTitleColor = [UIColor colorWithHexString:@"ff0a0a"];//colorWithHexString(@"ff0a0a");//LCColor(255, 10, 10);
                 } else {
                     cuTitleColor = titleColor;
                 }
@@ -105,13 +105,12 @@
                 }
                 
                 if (isColor) {
-                    cuTitleColor = colorWithHexString(@"aeaeae");//LCColor(173, 174, 174);
+                    cuTitleColor = [UIColor colorWithHexString:@"aeaeae"];//LCColor(173, 174, 174);
                 }
                 [btn setTitleColor:cuTitleColor forState:UIControlStateNormal];
-                [btn setBackgroundImage:[UIImage imageWithColor:UIColorFromRGB(0xdddddd) size:CGSizeMake(1, 1)] forState:UIControlStateHighlighted];
                 [btn addTarget:self action:@selector(didClickBtn:) forControlEvents:UIControlEventTouchUpInside];
                 CGFloat btnY = BUTTON_H * (i + (title ? 1 : 0));
-                btn.frame = CGRectMake(0, btnY, SCREEN_SIZE.width, BUTTON_H);
+                btn.frame = CGRectMake(0, btnY, [UIScreen mainScreen].bounds.size.width, BUTTON_H);
                 [bottomView addSubview:btn];
             }
             
@@ -119,10 +118,10 @@
                 
                 // 所有线条
                 UIView *line = [[UIView alloc] init];
-                line.backgroundColor = colorWithHexString(SeperatorLineCellColor);//LCColor(225, 225, 225);
+                line.backgroundColor = [UIColor colorWithHexString:@"e5e5e5"];//LCColor(225, 225, 225);
                 line.contentMode = UIViewContentModeCenter;
                 CGFloat lineY = (i + (title ? 1 : 0)) * BUTTON_H;
-                line.frame = CGRectMake(0, lineY, SCREEN_SIZE.width, 0.5f);
+                line.frame = CGRectMake(0, lineY, [UIScreen mainScreen].bounds.size.width, 0.5f);
                 [bottomView addSubview:line];
             }
         }
@@ -131,18 +130,18 @@
         UIButton *cancelBtn = [[UIButton alloc] init];
         cancelBtn.tag = titles.count + 1000;
         cancelBtn.backgroundColor = [UIColor whiteColor];
-        cancelBtn.titleLabel.font = [KKShare font16];
-        [cancelBtn setTitle:@"Cancel".local_basic forState:UIControlStateNormal];
+        cancelBtn.titleLabel.font = [UIFont systemFontOfSize:16];
+        [cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
         [cancelBtn setTitleColor:[UIColor colorWithHexString:@"333333"] forState:UIControlStateNormal];
-        [cancelBtn setBackgroundImage:[UIImage imageWithColor:UIColorFromRGB(0xdddddd) size:CGSizeMake(1, 1)] forState:UIControlStateHighlighted];
+//        [cancelBtn setBackgroundImage:[UIImage imageWithColor:UIColorFromRGB(0xdddddd) size:CGSizeMake(1, 1)] forState:UIControlStateHighlighted];
         [cancelBtn addTarget:self action:@selector(didClickCancelBtn) forControlEvents:UIControlEventTouchUpInside];
         CGFloat btnY = BUTTON_H * (titles.count + (title ? 1 : 0)) + 10.0f;
-        cancelBtn.frame = CGRectMake(0, btnY, SCREEN_SIZE.width, BUTTON_H);
+        cancelBtn.frame = CGRectMake(0, btnY, [UIScreen mainScreen].bounds.size.width, BUTTON_H);
         [bottomView addSubview:cancelBtn];
         CGFloat bottomH = (title ? BUTTON_H : 0) + BUTTON_H * titles.count + BUTTON_H + 10.0f;
-        bottomView.frame = CGRectMake(0, SCREEN_SIZE.height, SCREEN_SIZE.width, bottomH);
+        bottomView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width, bottomH);
         
-        self.frame = (CGRect){0, 0, SCREEN_SIZE};
+        self.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
         [[UIApplication sharedApplication].keyWindow addSubview:self];
     }
     return self;
@@ -154,7 +153,7 @@
     if ([self.kdelegate respondsToSelector:@selector(actionSheet:didClickedButtonAtIndex:)]) {
         [self.kdelegate actionSheet:self didClickedButtonAtIndex:(int)btn.tag - 1000];
     }
-    if (self.KKActionSheetClickedBlock) self.KKActionSheetClickedBlock(self,(int)btn.tag - 1000);
+    if (self.MRJActionSheetClickedBlock) self.MRJActionSheetClickedBlock(self,(int)btn.tag - 1000);
     [self dismiss:nil];
 }
 
@@ -241,8 +240,8 @@
    UIButton *btn = [_bottomView viewWithTag:index];
       [btn.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
    NSMutableAttributedString *title = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@\n%@",[btn titleForState:UIControlStateNormal],detailText]];
-    [title addAttribute:NSFontAttributeName value:KKShare.font10 range:[title.string rangeOfString:detailText]];
-    [title addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x999999) range:[title.string rangeOfString:detailText]];
+    [title addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:10] range:[title.string rangeOfString:detailText]];
+//    [title addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x999999) range:[title.string rangeOfString:detailText]];
     [btn setAttributedTitle:title forState:UIControlStateNormal];
 //    [btn setTitle:[NSString stringWithFormat:@"%@\n%@",[btn titleForState:UIControlStateNormal],detailText ] forState:UIControlStateNormal];
 }

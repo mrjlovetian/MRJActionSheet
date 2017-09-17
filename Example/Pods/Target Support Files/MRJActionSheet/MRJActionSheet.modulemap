@@ -1,0 +1,6 @@
+framework module MRJActionSheet {
+  umbrella header "MRJActionSheet-umbrella.h"
+
+  export *
+  module * { export * }
+}

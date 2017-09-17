@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'MRJActionSheet'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of MRJActionSheet.'
+  s.summary          = '一个简单的弹出选择框'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/mrjlovetian@gmail.com/MRJActionSheet'
+  s.homepage         = 'https://github.com/mrjlovetian/MRJActionSheet'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'mrjlovetian@gmail.com' => 'mrjyuhongjiang@gmail.com' }
-  s.source           = { :git => 'https://github.com/mrjlovetian@gmail.com/MRJActionSheet.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/mrjlovetian/MRJActionSheet.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
