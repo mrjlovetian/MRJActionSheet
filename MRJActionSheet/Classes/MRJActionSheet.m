@@ -16,18 +16,15 @@
     UIView *_darkView;
     UIView *_bottomView;
 }
-
 @end
 
 @implementation MRJActionSheet
-
 
 - (instancetype)initWithTitle:(NSString *)title
                  buttonTitles:(NSArray *)titles
                redButtonIndex:(int)buttonIndex
                      defColor:(NSArray *)indexs
-                     delegate:(id<MRJActionSheetDelegate>)delegate
-{
+                     delegate:(id<MRJActionSheetDelegate>)delegate{
     return [self initWithTitle:title titleColor:[UIColor colorWithHexString:@"333333"] buttonTitles:titles redButtonIndex:buttonIndex defColor:indexs delegate:delegate];
 }
 
@@ -36,8 +33,7 @@
                  buttonTitles:(NSArray *)titles
                redButtonIndex:(int)buttonIndex
                      defColor:(NSArray *)indexs
-                     delegate:(id<MRJActionSheetDelegate>)delegate;
-{
+                     delegate:(id<MRJActionSheetDelegate>)delegate{
     
     if (self = [super init]) {
         
@@ -157,7 +153,7 @@
     [self dismiss:nil];
 }
 
-- (void)dismiss:(UITapGestureRecognizer *)tap {
+- (void)dismiss:(UITapGestureRecognizer *)tap{
     
     if ([self.kdelegate respondsToSelector:@selector(actionSheetDidCancel:)]
         && tap) {
@@ -182,10 +178,8 @@
                      }];
 }
 
-- (void)didClickCancelBtn {
-    
-    if ([self.kdelegate respondsToSelector:@selector(actionSheetDidCancel:)]
-        ) {
+- (void)didClickCancelBtn{
+    if ([self.kdelegate respondsToSelector:@selector(actionSheetDidCancel:)]){
         [self.kdelegate actionSheetDidCancel:self];
     }
     
@@ -202,13 +196,10 @@
                          _bottomView.frame = frame;
                          
                      } completion:^(BOOL finished) {
-                         
                          [self removeFromSuperview];
-//                         if ([self.kdelegate respondsToSelector:@selector(actionSheet:didClickedButtonAtIndex:)]) {
-//                             [self.kdelegate actionSheet:self didClickedButtonAtIndex:(int)_buttonTitles.count];
-//                         }
                      }];
 }
+
 - (void) showWithDarkness:(CGFloat)alpha{
     [UIView animateWithDuration:0.3f
                           delay:0
@@ -221,21 +212,20 @@
                          CGRect frame = _bottomView.frame;
                          frame.origin.y -= frame.size.height;
                          _bottomView.frame = frame;
-                         
                      } completion:nil];
-
 }
 
-- (void)show {
+- (void)show{
     [self showWithDarkness:0.4];
 }
 
--(BOOL)isDisplay {
+- (BOOL)isDisplay{
     if (_darkView.alpha > 0) {
         return YES;
     }
     return NO;
 }
+
 - (void)addDetailText:(NSString *)detailText atIndex:(NSInteger)index{
    UIButton *btn = [_bottomView viewWithTag:index];
       [btn.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
@@ -243,6 +233,6 @@
     [title addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:10] range:[title.string rangeOfString:detailText]];
 //    [title addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x999999) range:[title.string rangeOfString:detailText]];
     [btn setAttributedTitle:title forState:UIControlStateNormal];
-//    [btn setTitle:[NSString stringWithFormat:@"%@\n%@",[btn titleForState:UIControlStateNormal],detailText ] forState:UIControlStateNormal];
 }
+
 @end

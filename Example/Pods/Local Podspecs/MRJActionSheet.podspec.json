@@ -1,9 +1,9 @@
 {
   "name": "MRJActionSheet",
   "version": "0.1.0",
-  "summary": "A short description of MRJActionSheet.",
+  "summary": "一个简单的弹出选择框",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/mrjlovetian@gmail.com/MRJActionSheet",
+  "homepage": "https://github.com/mrjlovetian/MRJActionSheet",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "mrjlovetian@gmail.com": "mrjyuhongjiang@gmail.com"
   },
   "source": {
-    "git": "https://github.com/mrjlovetian@gmail.com/MRJActionSheet.git",
+    "git": "https://github.com/mrjlovetian/MRJActionSheet.git",
     "tag": "0.1.0"
   },
   "platforms": {

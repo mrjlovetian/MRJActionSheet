@@ -30,8 +30,13 @@
 
 //带定义按钮颜色的初始化方法
 - (instancetype)initWithTitle:(NSString *)title titleColor:(UIColor *)titleColor buttonTitles:(NSArray *)titles redButtonIndex:(int)buttonIndex defColor:(NSArray *)indexs delegate:(id<MRJActionSheetDelegate>)delegate;
+
 - (void)showWithDarkness:(CGFloat)alpha;
+
 - (void)show;
--(BOOL)isDisplay;
+
+- (BOOL)isDisplay;
+
 - (void)addDetailText:(NSString*)detailText atIndex:(NSInteger)index;
+
 @end
