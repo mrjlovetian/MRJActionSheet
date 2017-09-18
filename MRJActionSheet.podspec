@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MRJActionSheet'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = '一个简单的弹出选择框'
 
 # This description is used to generate tags and improve search results.
