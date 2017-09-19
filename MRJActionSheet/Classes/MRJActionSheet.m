@@ -12,14 +12,15 @@
 #define BUTTON_HEIGHT 48.0f
 
 @interface MRJActionSheet () {
-    NSArray *_buttonTitles;
-    UIView *_darkView;
-    UIView *_bottomView;
+    NSArray     *_buttonTitles;///所有的标题
+    UIView      *_darkView;///背景视图
+    UIView      *_bottomView;///底部视图
 }
 @end
 
 @implementation MRJActionSheet
 
+///设置代理回调方法
 - (instancetype)initWithTitle:(NSString *)title
                  buttonTitles:(NSArray *)titles
                redButtonIndex:(int)buttonIndex
@@ -28,10 +29,12 @@
     return [self initWithTitle:title titleColor:[UIColor colorWithHexString:@"333333"] buttonTitles:titles redButtonIndex:buttonIndex defColor:indexs delegate:delegate actionSheetClickBlock:nil];
 }
 
+///有block 回调的方法
 - (instancetype)initWithTitle:(NSString *)title buttonTitles:(NSArray *)titles redButtonIndex:(int)buttonIndex defColor:(NSArray *)indexs actionSheetClickBlock:(MRJActionSheetBlock)actionSheetClickBlock{
     return [self initWithTitle:title titleColor:[UIColor colorWithHexString:@"333333"] buttonTitles:titles redButtonIndex:buttonIndex defColor:indexs delegate:nil actionSheetClickBlock:actionSheetClickBlock];
 }
 
+///最顶部的方法
 - (instancetype)initWithTitle:(NSString *)title
                    titleColor:(UIColor *)titleColor
                  buttonTitles:(NSArray *)titles
@@ -203,6 +206,7 @@
                      } completion:nil];
 }
 
+///完整显示
 - (void)show{
     [self showWithDarkness:0.4];
 }
@@ -214,6 +218,7 @@
     return NO;
 }
 
+///添加特殊的选择栏目
 - (void)addDetailText:(NSString *)detailText atIndex:(NSInteger)index{
    UIButton *btn = [_bottomView viewWithTag:index];
       [btn.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
