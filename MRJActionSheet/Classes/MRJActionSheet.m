@@ -63,7 +63,7 @@
         
         // 所有按钮的底部view
         UIView *bottomView = [[UIView alloc] init];
-        bottomView.backgroundColor = [UIColor colorWithHexString:@"ff801a"];//LCColor(242, 242, 242);
+        bottomView.backgroundColor = [UIColor colorWithHexString:@"f6f6f6"];//LCColor(242, 242, 242);
         [self addSubview:bottomView];
         _bottomView = bottomView;
         
