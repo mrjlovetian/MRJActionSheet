@@ -16,7 +16,7 @@
 
 
 	
-@interface UIColor (UIColor_Additions)
+@interface UIColor (UIColor_MRJAdditions)
 @property (nonatomic, readonly) CGColorSpaceModel colorSpaceModel;
 @property (nonatomic, readonly) BOOL canProvideRGBComponents;
 @property (nonatomic, readonly) CGFloat red; // Only valid if canProvideRGBComponents is YES

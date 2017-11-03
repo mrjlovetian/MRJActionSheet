@@ -6,7 +6,7 @@
 //  Copyright 2011 mysays.com. All rights reserved.
 //
 
-#import "UIColor+Additions.h"
+#import "UIColor+MRJAdditions.h"
  
 /*
  

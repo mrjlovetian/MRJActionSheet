@@ -7,9 +7,10 @@
 //
 
 #import "MRJActionSheet.h"
-#import "UIColor+Additions.h"
+#import "UIColor+MRJAdditions.h"
 
 #define BUTTON_HEIGHT 48.0f
+#define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 
 @interface MRJActionSheet () {
     NSArray     *_buttonTitles;///所有的标题
@@ -128,7 +129,7 @@
         cancelBtn.frame = CGRectMake(0, btnY, [UIScreen mainScreen].bounds.size.width, BUTTON_HEIGHT);
         [bottomView addSubview:cancelBtn];
         CGFloat bottomH = (title ? BUTTON_HEIGHT : 0) + BUTTON_HEIGHT * titles.count + BUTTON_HEIGHT + 10.0f;
-        bottomView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width, bottomH);
+        bottomView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width, bottomH + (iPhoneX?34:0));
         self.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
         [[UIApplication sharedApplication].keyWindow addSubview:self];
     }
