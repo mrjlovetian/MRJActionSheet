@@ -471,9 +471,6 @@ static NSMutableDictionary *colorNameCache = nil;
 	return [self styleString];
 }
 
-// Convert a color into RGB Color space, courtesy of Poltras
-// via http://ofcodeandmen.poltras.com/2009/01/22/convert-a-cgcolorref-to-another-cgcolorspaceref/
-//
 - (UIColor *)rgbColor {
 	// Call to undocumented method "styleString".
 	NSString *style = [self styleString];
@@ -490,6 +487,7 @@ static NSMutableDictionary *colorNameCache = nil;
 	
 	return [UIColor colorWithRed:red green:green blue:blue alpha:self.alpha];
 }
+
 @end
 #endif // SUPPORTS_UNDOCUMENTED_API
 
@@ -562,4 +560,5 @@ static const char *colorNameDB = ","
 	
 	return result;
 }
+
 @end
