@@ -48,6 +48,6 @@ typedef void(^MRJActionSheetBlock)(MRJActionSheet *actionSheet, int buttonIndex)
 - (BOOL)isDisplay;
 
 /// 插入内容
-- (void)addDetailText:(NSString*)detailText atIndex:(NSInteger)index;
+- (void)addDetailText:(NSString *)detailText atIndex:(NSInteger)index;
 
 @end

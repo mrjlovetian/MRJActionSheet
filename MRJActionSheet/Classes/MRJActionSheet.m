@@ -17,6 +17,7 @@
     UIView      *_darkView;///背景视图
     UIView      *_bottomView;///底部视图
 }
+
 @end
 
 @implementation MRJActionSheet
@@ -46,7 +47,7 @@
     if (self = [super init]) {
         self.mrjdelegate = delegate;
         self.mrjActionSheetClickBlock = actionSheetClickBlock;
-        // 暗黑色的view
+        /// 暗黑色的view
         UIView *darkView = [[UIView alloc] init];
         darkView.userInteractionEnabled = YES;
         darkView.backgroundColor = [UIColor colorWithHexString:@"313131"];//LCColor(46, 49, 50);
@@ -56,13 +57,13 @@
         _darkView = darkView;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismiss:)];
         [darkView addGestureRecognizer:tap];
-        // 所有按钮的底部view
+        /// 所有按钮的底部view
         UIView *bottomView = [[UIView alloc] init];
         bottomView.backgroundColor = [UIColor colorWithHexString:@"f6f6f6"];//LCColor(242, 242, 242);
         [self addSubview:bottomView];
         _bottomView = bottomView;
         if (title) {
-            // 标题
+            /// 标题
             UILabel *label = [[UILabel alloc] init];
             label.text = title;
             label.font = [UIFont systemFontOfSize:12];
@@ -79,7 +80,7 @@
                 UIButton *btn = [[UIButton alloc] init];
                 btn.tag = i + 1000;
                 btn.backgroundColor = [UIColor whiteColor];
-                 [btn.titleLabel setTextAlignment:NSTextAlignmentCenter];
+                [btn.titleLabel setTextAlignment:NSTextAlignmentCenter];
                 btn.titleLabel.font = [UIFont systemFontOfSize:17];
                 [btn setTitle:titles[i] forState:UIControlStateNormal];
                 UIColor *cuTitleColor = nil;
@@ -157,13 +158,11 @@
                           delay:0
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
-                         
                          _darkView.alpha = 0;
                          _darkView.userInteractionEnabled = NO;
                          CGRect frame = _bottomView.frame;
                          frame.origin.y += frame.size.height;
                          _bottomView.frame = frame;
-                         
                      } completion:^(BOOL finished) {
                          [self removeFromSuperview];
                      }];

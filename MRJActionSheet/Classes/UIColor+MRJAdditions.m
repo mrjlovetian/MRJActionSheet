@@ -9,7 +9,6 @@
 #import "UIColor+MRJAdditions.h"
  
 /*
- 
  Thanks to Poltras, Millenomi, Eridius, Nownot, WhatAHam, jberry,
  and everyone else who helped out but whose name is inadvertantly omitted
  
@@ -94,10 +93,8 @@ static NSMutableDictionary *colorNameCache = nil;
 
 - (NSArray *)arrayFromRGBAComponents {
 	NSAssert(self.canProvideRGBComponents, @"Must be an RGB color to use -arrayFromRGBAComponents");
-	
 	CGFloat r,g,b,a;
 	if (![self red:&r green:&g blue:&b alpha:&a]) return nil;
-	
 	return [NSArray arrayWithObjects:
 			[NSNumber numberWithFloat:r],
 			[NSNumber numberWithFloat:g],
@@ -108,9 +105,7 @@ static NSMutableDictionary *colorNameCache = nil;
 
 - (BOOL)red:(CGFloat *)red green:(CGFloat *)green blue:(CGFloat *)blue alpha:(CGFloat *)alpha {
 	const CGFloat *components = CGColorGetComponents(self.CGColor);
-	
 	CGFloat r,g,b,a;
-	
 	switch (self.colorSpaceModel) {
 		case kCGColorSpaceModelMonochrome:
 			r = g = b = components[0];
@@ -125,12 +120,10 @@ static NSMutableDictionary *colorNameCache = nil;
 		default:	// We don't know how to handle this model
 			return NO;
 	}
-	
 	if (red) *red = r;
 	if (green) *green = g;
 	if (blue) *blue = b;
 	if (alpha) *alpha = a;
-	
 	return YES;
 }
 
@@ -166,32 +159,27 @@ static NSMutableDictionary *colorNameCache = nil;
 
 - (UInt32)rgbHex {
 	NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use rgbHex");
-	
 	CGFloat r,g,b,a;
 	if (![self red:&r green:&g blue:&b alpha:&a]) return 0;
-	
 	r = MIN(MAX(self.red, 0.0f), 1.0f);
 	g = MIN(MAX(self.green, 0.0f), 1.0f);
 	b = MIN(MAX(self.blue, 0.0f), 1.0f);
-	
 	return (((int)roundf(r * 255)) << 16)
 	| (((int)roundf(g * 255)) << 8)
 	| (((int)roundf(b * 255)));
 }
 
--(UIColor *)mixWithColor:(UIColor *)color ratio:(CGFloat)ratio
-{
+- (UIColor *)mixWithColor:(UIColor *)color ratio:(CGFloat)ratio {
     if(ratio > 1)
         ratio = 1;
     const CGFloat * components1 = CGColorGetComponents(color.CGColor);
     const CGFloat * components2 = CGColorGetComponents(self.CGColor);
-    
     CGFloat r = components1[0]*ratio + components2[0]*(1-ratio);
     CGFloat g = components1[1]*ratio + components2[1]*(1-ratio);
     CGFloat b = components1[2]*ratio + components2[2]*(1-ratio);
-    
     return [UIColor colorWithRed:r green:g blue:b alpha:1];
 }
+
 #pragma mark Arithmetic operations
 
 - (UIColor *)colorByLuminanceMapping {
@@ -199,12 +187,10 @@ static NSMutableDictionary *colorNameCache = nil;
 	
 	CGFloat r,g,b,a;
 	if (![self red:&r green:&g blue:&b alpha:&a]) return nil;
-	
 	// http://en.wikipedia.org/wiki/Luma_(video)
 	// Y = 0.2126 R + 0.7152 G + 0.0722 B
 	return [UIColor colorWithWhite:r*0.2126f + g*0.7152f + b*0.0722f
 							 alpha:a];
-	
 }
 
 - (UIColor *)colorByMultiplyingByRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha {
@@ -221,10 +207,8 @@ static NSMutableDictionary *colorNameCache = nil;
 
 - (UIColor *)colorByAddingRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha {
 	NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmatic operations");
-	
 	CGFloat r,g,b,a;
 	if (![self red:&r green:&g blue:&b alpha:&a]) return nil;
-	
 	return [UIColor colorWithRed:MAX(0.0, MIN(1.0, r + red))
 						   green:MAX(0.0, MIN(1.0, g + green)) 
 							blue:MAX(0.0, MIN(1.0, b + blue))
@@ -233,10 +217,8 @@ static NSMutableDictionary *colorNameCache = nil;
 
 - (UIColor *)colorByLighteningToRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha {
 	NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmatic operations");
-	
 	CGFloat r,g,b,a;
 	if (![self red:&r green:&g blue:&b alpha:&a]) return nil;
-	
 	return [UIColor colorWithRed:MAX(r, red)
 						   green:MAX(g, green)
 							blue:MAX(b, blue)
@@ -245,10 +227,8 @@ static NSMutableDictionary *colorNameCache = nil;
 
 - (UIColor *)colorByDarkeningToRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha {
 	NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmatic operations");
-	
 	CGFloat r,g,b,a;
 	if (![self red:&r green:&g blue:&b alpha:&a]) return nil;
-	
 	return [UIColor colorWithRed:MIN(r, red)
 						   green:MIN(g, green)
 							blue:MIN(b, blue)
@@ -273,37 +253,29 @@ static NSMutableDictionary *colorNameCache = nil;
 
 - (UIColor *)colorByMultiplyingByColor:(UIColor *)color {
 	NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmatic operations");
-	
 	CGFloat r,g,b,a;
 	if (![self red:&r green:&g blue:&b alpha:&a]) return nil;
-	
 	return [self colorByMultiplyingByRed:r green:g blue:b alpha:1.0f];
 }
 
 - (UIColor *)colorByAddingColor:(UIColor *)color {
 	NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmatic operations");
-	
 	CGFloat r,g,b,a;
 	if (![self red:&r green:&g blue:&b alpha:&a]) return nil;
-	
 	return [self colorByAddingRed:r green:g blue:b alpha:0.0f];
 }
 
 - (UIColor *)colorByLighteningToColor:(UIColor *)color {
 	NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmatic operations");
-	
 	CGFloat r,g,b,a;
 	if (![self red:&r green:&g blue:&b alpha:&a]) return nil;
-	
 	return [self colorByLighteningToRed:r green:g blue:b alpha:0.0f];
 }
 
 - (UIColor *)colorByDarkeningToColor:(UIColor *)color {
 	NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmatic operations");
-	
 	CGFloat r,g,b,a;
 	if (![self red:&r green:&g blue:&b alpha:&a]) return nil;
-	
 	return [self colorByDarkeningToRed:r green:g blue:b alpha:1.0f];
 }
 
@@ -395,7 +367,6 @@ static NSMutableDictionary *colorNameCache = nil;
 	return color;
 }
 
-
 #pragma mark Class methods
 
 + (UIColor *)randomColor {
@@ -444,7 +415,6 @@ static NSMutableDictionary *colorNameCache = nil;
 							   forKey:cssColorName];
 		}
 	}
-	
 	return color;
 }
 
@@ -484,7 +454,6 @@ static NSMutableDictionary *colorNameCache = nil;
 	if (![scanner scanFloat:&blue]) return nil;
 	if (![scanner scanString:@")" intoString:NULL]) return nil;
 	if (![scanner isAtEnd]) return nil;
-	
 	return [UIColor colorWithRed:red green:green blue:blue alpha:self.alpha];
 }
 
@@ -557,7 +526,6 @@ static const char *colorNameDB = ","
 			result = [self colorWithRGBHex:hex];
 		}
 	}
-	
 	return result;
 }
 
