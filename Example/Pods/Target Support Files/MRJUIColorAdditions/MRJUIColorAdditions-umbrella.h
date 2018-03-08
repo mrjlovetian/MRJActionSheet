@@ -10,8 +10,8 @@
 #endif
 #endif
 
-#import "MRJActionSheet.h"
+#import "UIColor+MRJAdditions.h"
 
-FOUNDATION_EXPORT double MRJActionSheetVersionNumber;
-FOUNDATION_EXPORT const unsigned char MRJActionSheetVersionString[];
+FOUNDATION_EXPORT double MRJUIColorAdditionsVersionNumber;
+FOUNDATION_EXPORT const unsigned char MRJUIColorAdditionsVersionString[];
 

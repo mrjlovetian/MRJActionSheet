@@ -10,8 +10,3 @@
 #endif
 #endif
 
-#import "MRJActionSheet.h"
-
-FOUNDATION_EXPORT double MRJActionSheetVersionNumber;
-FOUNDATION_EXPORT const unsigned char MRJActionSheetVersionString[];
-

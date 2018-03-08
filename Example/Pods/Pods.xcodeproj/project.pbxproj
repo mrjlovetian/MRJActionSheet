@@ -7,83 +7,101 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C011DA0CEC2968A9DE1CEFF1A0FB8E1 /* UIColor+MRJAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A751FB442FE62B58429A3E07E2CBEBD2 /* UIColor+MRJAdditions.m */; };
-		186BBD290EFF2CFFBD83005A829A4AB4 /* MRJActionSheet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C52EE615A3646DE02C0F62FF9465D28 /* MRJActionSheet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		23761CCF0CE6654B192AF86F20378119 /* MRJActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D37671AF5E81EB8AEEEC480DF514E8 /* MRJActionSheet.m */; };
-		23DAAB01793B51C62C3F017220A1C55C /* Pods-MRJActionSheet_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FC0F7F1536992F54AF5DBB2A2A658E3 /* Pods-MRJActionSheet_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2E828AE2E57F029383CE2CBA8D72B6DE /* UIColor+MRJAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = CDD074484A4E3DD220B3EA83295D9D14 /* UIColor+MRJAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		307A61BCC9E52686A7955F702FC6E9D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		3181EE2115EEC8D50BC268693DD08F0E /* MRJActionSheet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F709CBD17C497898829957AE8CB0702 /* MRJActionSheet-dummy.m */; };
-		505C849AAE97788839C7040A772A254C /* Pods-MRJActionSheet_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB95A2607CD98398B07C1EE0FDF36AE /* Pods-MRJActionSheet_Example-dummy.m */; };
-		5D6EE7EA1BD1F64A768D8D2A94A710C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		0B9B3799E535DBC61B601BD7DD46FEAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6615DBA55227177684F93020F68E831 /* Foundation.framework */; };
+		1CFE046FE69772B6CFFC5A67190B5207 /* MRJActionSheet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F2D20F194E998A49CD6372866B8311 /* MRJActionSheet-dummy.m */; };
+		224F1DB57E1344B6298CF7F3B4E97E8E /* MRJActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 4257B127BD60F0FEFEA57FB34EA49FE5 /* MRJActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		307A61BCC9E52686A7955F702FC6E9D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6615DBA55227177684F93020F68E831 /* Foundation.framework */; };
+		30F25DBFC4F710768C65C77753792AE1 /* MRJActionSheet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 62F32B86F5085B872FC475FE69FF91DB /* MRJActionSheet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D354DD46194621AC8044B547AE40342 /* MRJActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 36839F4768FB5EB94FE2797336022D62 /* MRJActionSheet.m */; };
+		5886D1F894BB29571C772D0515EFCA2A /* MRJUIColorAdditions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66D9CB951FDE47286CB7CB8FE90A4D9 /* MRJUIColorAdditions.framework */; };
 		66E0D140932F102F064712D2BC10A78A /* Pods-MRJActionSheet_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FC7E968F10D17C90E41921A6C6A17F4 /* Pods-MRJActionSheet_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7CE2C4D7EDB932D040C2863230FC0280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		6A752AB8A0FC65B16BE8AFEC96346607 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6615DBA55227177684F93020F68E831 /* Foundation.framework */; };
+		A3B0A690124E47680B72130B1FD1319A /* Pods-MRJActionSheet_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FC0F7F1536992F54AF5DBB2A2A658E3 /* Pods-MRJActionSheet_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB6CC1FC37D5587953BE57E850C0C18D /* UIColor+MRJAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A09F9FDCD8E35013786535BEAEB4CAE /* UIColor+MRJAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF6C3F6CA85B851C67E97A19678D3C2B /* Pods-MRJActionSheet_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C8EF8A4419F9BDB18DEE97F3ABA30C /* Pods-MRJActionSheet_Tests-dummy.m */; };
-		E02D68F0A33DB87120300D543D987AFE /* MRJActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 922890880FA1BCDBFC2ABBCB3869B2BF /* MRJActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD8DF2CB702CACCE9738B265CD4A88B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6615DBA55227177684F93020F68E831 /* Foundation.framework */; };
+		D173E6DA87F53A92CBF522B741EBD0E6 /* MRJUIColorAdditions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF2A73180218829CF2633474CB907DF /* MRJUIColorAdditions-dummy.m */; };
+		DA084AF85AB24E6A1DE98D39E34E6838 /* UIColor+MRJAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F744D2E6044EE04799E48DEFE813FC /* UIColor+MRJAdditions.m */; };
+		ED99A8A3E5C2F2BF5F0A1DAF97224509 /* Pods-MRJActionSheet_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB95A2607CD98398B07C1EE0FDF36AE /* Pods-MRJActionSheet_Example-dummy.m */; };
+		F7A63994E623CEC92D191CC0DD555B5A /* MRJUIColorAdditions-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 19829F40DD0A91CC5B20C90A288274C6 /* MRJUIColorAdditions-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B48EFC3D33CB4A300492804B7D77ADB0 /* PBXContainerItemProxy */ = {
+		129DE6D8DFBBDE7DBDF935909FFE4DCA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AD7B2DD7E0AA65175E595D6C3D474B12;
+			remoteGlobalIDString = E0AD59480C6B385EDD6D13A0906753A5;
+			remoteInfo = MRJUIColorAdditions;
+		};
+		38FFCD831C6B9703FC0676A772A5C997 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46A133F175B87FEBA531CAB022ECE4B5;
 			remoteInfo = MRJActionSheet;
+		};
+		96C6C920564C81A29051CF7B30DB1FB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0AD59480C6B385EDD6D13A0906753A5;
+			remoteInfo = MRJUIColorAdditions;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		036867D5647A20F9C08932C149400260 /* Pods-MRJActionSheet_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MRJActionSheet_Tests.modulemap"; sourceTree = "<group>"; };
-		0F709CBD17C497898829957AE8CB0702 /* MRJActionSheet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MRJActionSheet-dummy.m"; sourceTree = "<group>"; };
-		1076807F39C8CE38587F09196BB39C61 /* Pods_MRJActionSheet_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MRJActionSheet_Example.framework; path = "Pods-MRJActionSheet_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B1D1696E232F51717764A1144F753F6 /* MRJActionSheet.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MRJActionSheet.xcconfig; sourceTree = "<group>"; };
+		13F2D20F194E998A49CD6372866B8311 /* MRJActionSheet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MRJActionSheet-dummy.m"; sourceTree = "<group>"; };
+		19829F40DD0A91CC5B20C90A288274C6 /* MRJUIColorAdditions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRJUIColorAdditions-umbrella.h"; sourceTree = "<group>"; };
+		1A09F9FDCD8E35013786535BEAEB4CAE /* UIColor+MRJAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+MRJAdditions.h"; path = "MRJUIColorAdditions/Classes/UIColor+MRJAdditions.h"; sourceTree = "<group>"; };
 		1C17E85DF1DED19A4CF003BA10091BFA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F1E6B0DC3B4B6B2019E000D739E7F88 /* Pods-MRJActionSheet_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRJActionSheet_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		2E8553E016ABA9AF24C980350E79AE0B /* Pods-MRJActionSheet_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRJActionSheet_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		311024FA014074657762C27ADB1DBE9F /* Pods-MRJActionSheet_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRJActionSheet_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		325FE1A96072D1D18718125D0C558C27 /* Pods-MRJActionSheet_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MRJActionSheet_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		36839F4768FB5EB94FE2797336022D62 /* MRJActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRJActionSheet.m; path = MRJActionSheet/Classes/MRJActionSheet.m; sourceTree = "<group>"; };
+		39168CCB453A8FE33A32AEF6D555503A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FC7E968F10D17C90E41921A6C6A17F4 /* Pods-MRJActionSheet_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MRJActionSheet_Tests-umbrella.h"; sourceTree = "<group>"; };
-		41D37671AF5E81EB8AEEEC480DF514E8 /* MRJActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRJActionSheet.m; path = MRJActionSheet/Classes/MRJActionSheet.m; sourceTree = "<group>"; };
-		4C52EE615A3646DE02C0F62FF9465D28 /* MRJActionSheet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRJActionSheet-umbrella.h"; sourceTree = "<group>"; };
+		4257B127BD60F0FEFEA57FB34EA49FE5 /* MRJActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRJActionSheet.h; path = MRJActionSheet/Classes/MRJActionSheet.h; sourceTree = "<group>"; };
+		4D8CD27C864B18E2968AC73A3F8E03F0 /* MRJActionSheet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MRJActionSheet.modulemap; sourceTree = "<group>"; };
 		4DECEA87418C7AC3F96589467D3A7609 /* Pods-MRJActionSheet_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRJActionSheet_Example-resources.sh"; sourceTree = "<group>"; };
 		581AD96FFCE99454F831A766B950BD7A /* Pods-MRJActionSheet_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRJActionSheet_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		58CF8A7FD962406545CCDD94ACB86B4D /* MRJActionSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MRJActionSheet.framework; path = MRJActionSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62F32B86F5085B872FC475FE69FF91DB /* MRJActionSheet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRJActionSheet-umbrella.h"; sourceTree = "<group>"; };
 		66CB91A81E81A20D55009A4AB5B7363E /* Pods-MRJActionSheet_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MRJActionSheet_Example.modulemap"; sourceTree = "<group>"; };
 		67E554A42A3419599EC87E4F1CC6D3F7 /* Pods-MRJActionSheet_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MRJActionSheet_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		6BF2A73180218829CF2633474CB907DF /* MRJUIColorAdditions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MRJUIColorAdditions-dummy.m"; sourceTree = "<group>"; };
+		7182E373E0F1B213F0BDF9EADE12A55B /* MRJUIColorAdditions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MRJUIColorAdditions.xcconfig; sourceTree = "<group>"; };
 		79C1A647D27A9611398506C30F7607F4 /* Pods-MRJActionSheet_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MRJActionSheet_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7EC2DD4D3974200037D5351422896FEA /* MRJActionSheet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MRJActionSheet.modulemap; sourceTree = "<group>"; };
 		7FB95A2607CD98398B07C1EE0FDF36AE /* Pods-MRJActionSheet_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MRJActionSheet_Example-dummy.m"; sourceTree = "<group>"; };
+		802CD294B919C89AA7C82923EA8F109C /* Pods_MRJActionSheet_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MRJActionSheet_Example.framework; path = "Pods-MRJActionSheet_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8634F4B1FB780C45CE55BB0E348C739F /* MRJUIColorAdditions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRJUIColorAdditions-prefix.pch"; sourceTree = "<group>"; };
 		892BC932040D945EDD8698A4317A5D04 /* Pods-MRJActionSheet_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRJActionSheet_Example.release.xcconfig"; sourceTree = "<group>"; };
-		8EAB7D6A1B8CBF5B7BF1967759125D29 /* MRJActionSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MRJActionSheet.framework; path = MRJActionSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FC0F7F1536992F54AF5DBB2A2A658E3 /* Pods-MRJActionSheet_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MRJActionSheet_Example-umbrella.h"; sourceTree = "<group>"; };
-		922890880FA1BCDBFC2ABBCB3869B2BF /* MRJActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRJActionSheet.h; path = MRJActionSheet/Classes/MRJActionSheet.h; sourceTree = "<group>"; };
+		928D8047B9535000C0C725C103C478BA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94F744D2E6044EE04799E48DEFE813FC /* UIColor+MRJAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+MRJAdditions.m"; path = "MRJUIColorAdditions/Classes/UIColor+MRJAdditions.m"; sourceTree = "<group>"; };
 		99C8EF8A4419F9BDB18DEE97F3ABA30C /* Pods-MRJActionSheet_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MRJActionSheet_Tests-dummy.m"; sourceTree = "<group>"; };
 		9B96150ED7C3092434EF340042805539 /* Pods-MRJActionSheet_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRJActionSheet_Tests-resources.sh"; sourceTree = "<group>"; };
-		A751FB442FE62B58429A3E07E2CBEBD2 /* UIColor+MRJAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+MRJAdditions.m"; path = "MRJActionSheet/Classes/UIColor+MRJAdditions.m"; sourceTree = "<group>"; };
 		A781AA19BC0458C85A37C745167EF71A /* Pods-MRJActionSheet_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRJActionSheet_Example-frameworks.sh"; sourceTree = "<group>"; };
-		B0C6AEA88E4E3041A0A7FE49FCA721DE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDD074484A4E3DD220B3EA83295D9D14 /* UIColor+MRJAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+MRJAdditions.h"; path = "MRJActionSheet/Classes/UIColor+MRJAdditions.h"; sourceTree = "<group>"; };
+		BC0644E33A7B6DD24DAE730EEB2421B2 /* MRJUIColorAdditions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MRJUIColorAdditions.modulemap; sourceTree = "<group>"; };
+		C6615DBA55227177684F93020F68E831 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CF43B6CBCB943E74A51F0160836CE23E /* Pods-MRJActionSheet_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MRJActionSheet_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D42D50EC4D279357B1ED774A1928F7B4 /* MRJActionSheet-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRJActionSheet-prefix.pch"; sourceTree = "<group>"; };
-		EB602280EF783614B27CB18EB55E5007 /* Pods_MRJActionSheet_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MRJActionSheet_Tests.framework; path = "Pods-MRJActionSheet_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8804C419B960B325E71DF694D57E388 /* MRJActionSheet-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRJActionSheet-prefix.pch"; sourceTree = "<group>"; };
 		ECAB4E4D65174394977E95E8F9403396 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F146ABA6B808985F65F4C183D9A3553A /* MRJActionSheet.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MRJActionSheet.xcconfig; sourceTree = "<group>"; };
+		F5CA85EA3E76088BB3E81B1CB9AFFFBA /* Pods_MRJActionSheet_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MRJActionSheet_Tests.framework; path = "Pods-MRJActionSheet_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F66D9CB951FDE47286CB7CB8FE90A4D9 /* MRJUIColorAdditions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRJUIColorAdditions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC84533788CFD4B80F8EDF71083B83F5 /* MRJUIColorAdditions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MRJUIColorAdditions.framework; path = MRJUIColorAdditions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		995D36980CD6EC73A413BAD8E6DFD0FA /* Frameworks */ = {
+		195B15F3141569F21C8F1AD5DA923F09 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D6EE7EA1BD1F64A768D8D2A94A710C1 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C464D512B7EC2CE26538D67D80AAE89D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7CE2C4D7EDB932D040C2863230FC0280 /* Foundation.framework in Frameworks */,
+				0B9B3799E535DBC61B601BD7DD46FEAF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,9 +113,111 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EE39525539F23F4255A66B262F3F2883 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A752AB8A0FC65B16BE8AFEC96346607 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD68B8978C08EA4AF01B7470A07D57C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD8DF2CB702CACCE9738B265CD4A88B6 /* Foundation.framework in Frameworks */,
+				5886D1F894BB29571C772D0515EFCA2A /* MRJUIColorAdditions.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04D9A5067A927FFDC11611080F2F0EBD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				928D8047B9535000C0C725C103C478BA /* Info.plist */,
+				BC0644E33A7B6DD24DAE730EEB2421B2 /* MRJUIColorAdditions.modulemap */,
+				7182E373E0F1B213F0BDF9EADE12A55B /* MRJUIColorAdditions.xcconfig */,
+				6BF2A73180218829CF2633474CB907DF /* MRJUIColorAdditions-dummy.m */,
+				8634F4B1FB780C45CE55BB0E348C739F /* MRJUIColorAdditions-prefix.pch */,
+				19829F40DD0A91CC5B20C90A288274C6 /* MRJUIColorAdditions-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MRJUIColorAdditions";
+			sourceTree = "<group>";
+		};
+		06B6A4C4CBE0FAD91F85CFE589CBE86C /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2FA695DC0CEDCF9CFD85D20A7686877B /* MRJActionSheet */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		0C0E9A7DFDC87840F295E5F210166203 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58CF8A7FD962406545CCDD94ACB86B4D /* MRJActionSheet.framework */,
+				FC84533788CFD4B80F8EDF71083B83F5 /* MRJUIColorAdditions.framework */,
+				802CD294B919C89AA7C82923EA8F109C /* Pods_MRJActionSheet_Example.framework */,
+				F5CA85EA3E76088BB3E81B1CB9AFFFBA /* Pods_MRJActionSheet_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1059DD69110643E7A5E19E099B0EE71C /* MRJUIColorAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				1A09F9FDCD8E35013786535BEAEB4CAE /* UIColor+MRJAdditions.h */,
+				94F744D2E6044EE04799E48DEFE813FC /* UIColor+MRJAdditions.m */,
+				04D9A5067A927FFDC11611080F2F0EBD /* Support Files */,
+			);
+			name = MRJUIColorAdditions;
+			path = MRJUIColorAdditions;
+			sourceTree = "<group>";
+		};
+		13EB704977F60608115082BCB551BD7B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C6615DBA55227177684F93020F68E831 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		1BEB8B378543C2285A6BCC635F7CF023 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1059DD69110643E7A5E19E099B0EE71C /* MRJUIColorAdditions */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2BF35BEA57B8F4AE0157F91B035A761F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				39168CCB453A8FE33A32AEF6D555503A /* Info.plist */,
+				4D8CD27C864B18E2968AC73A3F8E03F0 /* MRJActionSheet.modulemap */,
+				F146ABA6B808985F65F4C183D9A3553A /* MRJActionSheet.xcconfig */,
+				13F2D20F194E998A49CD6372866B8311 /* MRJActionSheet-dummy.m */,
+				D8804C419B960B325E71DF694D57E388 /* MRJActionSheet-prefix.pch */,
+				62F32B86F5085B872FC475FE69FF91DB /* MRJActionSheet-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/MRJActionSheet";
+			sourceTree = "<group>";
+		};
+		2FA695DC0CEDCF9CFD85D20A7686877B /* MRJActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				4257B127BD60F0FEFEA57FB34EA49FE5 /* MRJActionSheet.h */,
+				36839F4768FB5EB94FE2797336022D62 /* MRJActionSheet.m */,
+				2BF35BEA57B8F4AE0157F91B035A761F /* Support Files */,
+			);
+			name = MRJActionSheet;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		30A55E5807BA919C309158F4097D44A9 /* Pods-MRJActionSheet_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,24 +254,6 @@
 			path = "Target Support Files/Pods-MRJActionSheet_Tests";
 			sourceTree = "<group>";
 		};
-		4109119FD665737FF8D26B97A3E14A94 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8EAB7D6A1B8CBF5B7BF1967759125D29 /* MRJActionSheet.framework */,
-				1076807F39C8CE38587F09196BB39C61 /* Pods_MRJActionSheet_Example.framework */,
-				EB602280EF783614B27CB18EB55E5007 /* Pods_MRJActionSheet_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		5173CB63D95E4440CBEA3D33D6F4649E /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				95BCFBF72A0DAF6A20F77297BAFCA206 /* MRJActionSheet */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		7B6820D3116A5BC8B1F79F50E85E1683 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,67 +267,26 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				5173CB63D95E4440CBEA3D33D6F4649E /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				4109119FD665737FF8D26B97A3E14A94 /* Products */,
+				06B6A4C4CBE0FAD91F85CFE589CBE86C /* Development Pods */,
+				C73B70C35F6B4593629D52126BDCAC17 /* Frameworks */,
+				1BEB8B378543C2285A6BCC635F7CF023 /* Pods */,
+				0C0E9A7DFDC87840F295E5F210166203 /* Products */,
 				7B6820D3116A5BC8B1F79F50E85E1683 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		95BCFBF72A0DAF6A20F77297BAFCA206 /* MRJActionSheet */ = {
+		C73B70C35F6B4593629D52126BDCAC17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				922890880FA1BCDBFC2ABBCB3869B2BF /* MRJActionSheet.h */,
-				41D37671AF5E81EB8AEEEC480DF514E8 /* MRJActionSheet.m */,
-				CDD074484A4E3DD220B3EA83295D9D14 /* UIColor+MRJAdditions.h */,
-				A751FB442FE62B58429A3E07E2CBEBD2 /* UIColor+MRJAdditions.m */,
-				F9C0185C8292F0B915D93E84201061F1 /* Support Files */,
-			);
-			name = MRJActionSheet;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				F66D9CB951FDE47286CB7CB8FE90A4D9 /* MRJUIColorAdditions.framework */,
+				13EB704977F60608115082BCB551BD7B /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		F9C0185C8292F0B915D93E84201061F1 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B0C6AEA88E4E3041A0A7FE49FCA721DE /* Info.plist */,
-				7EC2DD4D3974200037D5351422896FEA /* MRJActionSheet.modulemap */,
-				1B1D1696E232F51717764A1144F753F6 /* MRJActionSheet.xcconfig */,
-				0F709CBD17C497898829957AE8CB0702 /* MRJActionSheet-dummy.m */,
-				D42D50EC4D279357B1ED774A1928F7B4 /* MRJActionSheet-prefix.pch */,
-				4C52EE615A3646DE02C0F62FF9465D28 /* MRJActionSheet-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/MRJActionSheet";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		20BDDED9240C1376795CCE183803CB0B /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				23DAAB01793B51C62C3F017220A1C55C /* Pods-MRJActionSheet_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2FE576AA4410520BB4B736EC36073EBC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -234,19 +295,53 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FB15B809E4A080DE5EF095D5336DB327 /* Headers */ = {
+		3DB3CBE176F85F9C5260215D0C8C3206 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				186BBD290EFF2CFFBD83005A829A4AB4 /* MRJActionSheet-umbrella.h in Headers */,
-				E02D68F0A33DB87120300D543D987AFE /* MRJActionSheet.h in Headers */,
-				2E828AE2E57F029383CE2CBA8D72B6DE /* UIColor+MRJAdditions.h in Headers */,
+				A3B0A690124E47680B72130B1FD1319A /* Pods-MRJActionSheet_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E368DC44E7C1A14C69418225485D3BC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7A63994E623CEC92D191CC0DD555B5A /* MRJUIColorAdditions-umbrella.h in Headers */,
+				AB6CC1FC37D5587953BE57E850C0C18D /* UIColor+MRJAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5B1515BEB5991689C6C0B3679CD4649 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30F25DBFC4F710768C65C77753792AE1 /* MRJActionSheet-umbrella.h in Headers */,
+				224F1DB57E1344B6298CF7F3B4E97E8E /* MRJActionSheet.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		46A133F175B87FEBA531CAB022ECE4B5 /* MRJActionSheet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80F83D507176D2EECBF67E220C1F1311 /* Build configuration list for PBXNativeTarget "MRJActionSheet" */;
+			buildPhases = (
+				1807E12C826085D1CAC6DF0C9A318CDB /* Sources */,
+				FD68B8978C08EA4AF01B7470A07D57C8 /* Frameworks */,
+				D5B1515BEB5991689C6C0B3679CD4649 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC9CBDC23556315F1D60688634E3CB78 /* PBXTargetDependency */,
+			);
+			name = MRJActionSheet;
+			productName = MRJActionSheet;
+			productReference = 58CF8A7FD962406545CCDD94ACB86B4D /* MRJActionSheet.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		A6D26F2079631FA478A020E72423AF8B /* Pods-MRJActionSheet_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAA20478CEC73480E8BC628586EE5F72 /* Build configuration list for PBXNativeTarget "Pods-MRJActionSheet_Tests" */;
@@ -261,42 +356,43 @@
 			);
 			name = "Pods-MRJActionSheet_Tests";
 			productName = "Pods-MRJActionSheet_Tests";
-			productReference = EB602280EF783614B27CB18EB55E5007 /* Pods_MRJActionSheet_Tests.framework */;
+			productReference = F5CA85EA3E76088BB3E81B1CB9AFFFBA /* Pods_MRJActionSheet_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		AD7B2DD7E0AA65175E595D6C3D474B12 /* MRJActionSheet */ = {
+		B64CC4052720031F672D9BAA6C65B064 /* Pods-MRJActionSheet_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52DD7CF2FCDDCAADD05B971541A662EC /* Build configuration list for PBXNativeTarget "MRJActionSheet" */;
+			buildConfigurationList = B205901D69FF569C29289F2C8513C924 /* Build configuration list for PBXNativeTarget "Pods-MRJActionSheet_Example" */;
 			buildPhases = (
-				39AAA213CBA30749B8A60D8AFA60D1C2 /* Sources */,
-				C464D512B7EC2CE26538D67D80AAE89D /* Frameworks */,
-				FB15B809E4A080DE5EF095D5336DB327 /* Headers */,
+				6CBF77C6F4C164C156B91F25A1A0AF52 /* Sources */,
+				195B15F3141569F21C8F1AD5DA923F09 /* Frameworks */,
+				3DB3CBE176F85F9C5260215D0C8C3206 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = MRJActionSheet;
-			productName = MRJActionSheet;
-			productReference = 8EAB7D6A1B8CBF5B7BF1967759125D29 /* MRJActionSheet.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		CD495C076F7FC00ABDD5557C5D696E8C /* Pods-MRJActionSheet_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FFDF067EBEFF9F26D717DAE7A53DF9E9 /* Build configuration list for PBXNativeTarget "Pods-MRJActionSheet_Example" */;
-			buildPhases = (
-				7387582BDDF418CB9C2D9F08FA4677F1 /* Sources */,
-				995D36980CD6EC73A413BAD8E6DFD0FA /* Frameworks */,
-				20BDDED9240C1376795CCE183803CB0B /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				64EC108ACCF5CC9FEB3D04ABD61F9734 /* PBXTargetDependency */,
+				2E5F75F2991D719AE4DAB12F43D1E657 /* PBXTargetDependency */,
+				8A2DC7CF3F0215CCED4C273E5F4ED4B7 /* PBXTargetDependency */,
 			);
 			name = "Pods-MRJActionSheet_Example";
 			productName = "Pods-MRJActionSheet_Example";
-			productReference = 1076807F39C8CE38587F09196BB39C61 /* Pods_MRJActionSheet_Example.framework */;
+			productReference = 802CD294B919C89AA7C82923EA8F109C /* Pods_MRJActionSheet_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E0AD59480C6B385EDD6D13A0906753A5 /* MRJUIColorAdditions */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 159F4A4DE4342E78ED3922C77A13B1D1 /* Build configuration list for PBXNativeTarget "MRJUIColorAdditions" */;
+			buildPhases = (
+				88F261D47893EF168E282BB058EE6B3E /* Sources */,
+				EE39525539F23F4255A66B262F3F2883 /* Frameworks */,
+				6E368DC44E7C1A14C69418225485D3BC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MRJUIColorAdditions;
+			productName = MRJUIColorAdditions;
+			productReference = FC84533788CFD4B80F8EDF71083B83F5 /* MRJUIColorAdditions.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -316,33 +412,42 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 4109119FD665737FF8D26B97A3E14A94 /* Products */;
+			productRefGroup = 0C0E9A7DFDC87840F295E5F210166203 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AD7B2DD7E0AA65175E595D6C3D474B12 /* MRJActionSheet */,
-				CD495C076F7FC00ABDD5557C5D696E8C /* Pods-MRJActionSheet_Example */,
+				46A133F175B87FEBA531CAB022ECE4B5 /* MRJActionSheet */,
+				E0AD59480C6B385EDD6D13A0906753A5 /* MRJUIColorAdditions */,
+				B64CC4052720031F672D9BAA6C65B064 /* Pods-MRJActionSheet_Example */,
 				A6D26F2079631FA478A020E72423AF8B /* Pods-MRJActionSheet_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		39AAA213CBA30749B8A60D8AFA60D1C2 /* Sources */ = {
+		1807E12C826085D1CAC6DF0C9A318CDB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3181EE2115EEC8D50BC268693DD08F0E /* MRJActionSheet-dummy.m in Sources */,
-				23761CCF0CE6654B192AF86F20378119 /* MRJActionSheet.m in Sources */,
-				0C011DA0CEC2968A9DE1CEFF1A0FB8E1 /* UIColor+MRJAdditions.m in Sources */,
+				1CFE046FE69772B6CFFC5A67190B5207 /* MRJActionSheet-dummy.m in Sources */,
+				4D354DD46194621AC8044B547AE40342 /* MRJActionSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7387582BDDF418CB9C2D9F08FA4677F1 /* Sources */ = {
+		6CBF77C6F4C164C156B91F25A1A0AF52 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				505C849AAE97788839C7040A772A254C /* Pods-MRJActionSheet_Example-dummy.m in Sources */,
+				ED99A8A3E5C2F2BF5F0A1DAF97224509 /* Pods-MRJActionSheet_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88F261D47893EF168E282BB058EE6B3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D173E6DA87F53A92CBF522B741EBD0E6 /* MRJUIColorAdditions-dummy.m in Sources */,
+				DA084AF85AB24E6A1DE98D39E34E6838 /* UIColor+MRJAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,11 +462,23 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		64EC108ACCF5CC9FEB3D04ABD61F9734 /* PBXTargetDependency */ = {
+		2E5F75F2991D719AE4DAB12F43D1E657 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MRJActionSheet;
-			target = AD7B2DD7E0AA65175E595D6C3D474B12 /* MRJActionSheet */;
-			targetProxy = B48EFC3D33CB4A300492804B7D77ADB0 /* PBXContainerItemProxy */;
+			target = 46A133F175B87FEBA531CAB022ECE4B5 /* MRJActionSheet */;
+			targetProxy = 38FFCD831C6B9703FC0676A772A5C997 /* PBXContainerItemProxy */;
+		};
+		8A2DC7CF3F0215CCED4C273E5F4ED4B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MRJUIColorAdditions;
+			target = E0AD59480C6B385EDD6D13A0906753A5 /* MRJUIColorAdditions */;
+			targetProxy = 129DE6D8DFBBDE7DBDF935909FFE4DCA /* PBXContainerItemProxy */;
+		};
+		FC9CBDC23556315F1D60688634E3CB78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MRJUIColorAdditions;
+			target = E0AD59480C6B385EDD6D13A0906753A5 /* MRJUIColorAdditions */;
+			targetProxy = 96C6C920564C81A29051CF7B30DB1FB2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -425,6 +542,95 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
+		};
+		2013DE32F6B32C41C9C3E86772A28AB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7182E373E0F1B213F0BDF9EADE12A55B /* MRJUIColorAdditions.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MRJUIColorAdditions/MRJUIColorAdditions-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MRJUIColorAdditions/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MRJUIColorAdditions/MRJUIColorAdditions.modulemap";
+				PRODUCT_NAME = MRJUIColorAdditions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4A3CCFC269F94F6A9BC9BCB1642C95AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7182E373E0F1B213F0BDF9EADE12A55B /* MRJUIColorAdditions.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MRJUIColorAdditions/MRJUIColorAdditions-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MRJUIColorAdditions/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MRJUIColorAdditions/MRJUIColorAdditions.modulemap";
+				PRODUCT_NAME = MRJUIColorAdditions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		54431C1F081199872976A7F2846BF1D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F146ABA6B808985F65F4C183D9A3553A /* MRJActionSheet.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MRJActionSheet/MRJActionSheet-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MRJActionSheet/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MRJActionSheet/MRJActionSheet.modulemap";
+				PRODUCT_NAME = MRJActionSheet;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		5E61716D30757775487709FA8AA75002 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -546,37 +752,7 @@
 			};
 			name = Release;
 		};
-		8B3B09E79D80A36F7E1F167B985CAA6A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B1D1696E232F51717764A1144F753F6 /* MRJActionSheet.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MRJActionSheet/MRJActionSheet-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MRJActionSheet/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MRJActionSheet/MRJActionSheet.modulemap";
-				PRODUCT_NAME = MRJActionSheet;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		9368AA1AB9E849D591B3F3E7344A7BF3 /* Release */ = {
+		C07747BFC2C2533594DBBA0E889CEE6C /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 892BC932040D945EDD8698A4317A5D04 /* Pods-MRJActionSheet_Example.release.xcconfig */;
 			buildSettings = {
@@ -609,36 +785,7 @@
 			};
 			name = Release;
 		};
-		A2E62BE3D91A44891C503F1770F0968F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B1D1696E232F51717764A1144F753F6 /* MRJActionSheet.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MRJActionSheet/MRJActionSheet-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MRJActionSheet/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MRJActionSheet/MRJActionSheet.modulemap";
-				PRODUCT_NAME = MRJActionSheet;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FEADB0E87BFE34190C8F0719883F1BAD /* Debug */ = {
+		C1340EABBA8A134A39F609887C7310F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 581AD96FFCE99454F831A766B950BD7A /* Pods-MRJActionSheet_Example.debug.xcconfig */;
 			buildSettings = {
@@ -670,9 +817,47 @@
 			};
 			name = Debug;
 		};
+		EA5468202C608520A1A57B9621C59F56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F146ABA6B808985F65F4C183D9A3553A /* MRJActionSheet.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MRJActionSheet/MRJActionSheet-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MRJActionSheet/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MRJActionSheet/MRJActionSheet.modulemap";
+				PRODUCT_NAME = MRJActionSheet;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		159F4A4DE4342E78ED3922C77A13B1D1 /* Build configuration list for PBXNativeTarget "MRJUIColorAdditions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2013DE32F6B32C41C9C3E86772A28AB7 /* Debug */,
+				4A3CCFC269F94F6A9BC9BCB1642C95AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -682,11 +867,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52DD7CF2FCDDCAADD05B971541A662EC /* Build configuration list for PBXNativeTarget "MRJActionSheet" */ = {
+		80F83D507176D2EECBF67E220C1F1311 /* Build configuration list for PBXNativeTarget "MRJActionSheet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A2E62BE3D91A44891C503F1770F0968F /* Debug */,
-				8B3B09E79D80A36F7E1F167B985CAA6A /* Release */,
+				EA5468202C608520A1A57B9621C59F56 /* Debug */,
+				54431C1F081199872976A7F2846BF1D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B205901D69FF569C29289F2C8513C924 /* Build configuration list for PBXNativeTarget "Pods-MRJActionSheet_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1340EABBA8A134A39F609887C7310F3 /* Debug */,
+				C07747BFC2C2533594DBBA0E889CEE6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -696,15 +890,6 @@
 			buildConfigurations = (
 				5E61716D30757775487709FA8AA75002 /* Debug */,
 				8B21BB85C6C7BF50B664BAE0F5A3E3E1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FFDF067EBEFF9F26D717DAE7A53DF9E9 /* Build configuration list for PBXNativeTarget "Pods-MRJActionSheet_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FEADB0E87BFE34190C8F0719883F1BAD /* Debug */,
-				9368AA1AB9E849D591B3F3E7344A7BF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
