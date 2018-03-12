@@ -35,7 +35,7 @@ typedef void(^MRJActionSheetBlock)(MRJActionSheet *actionSheet, int buttonIndex)
 /// 如果没有红色按钮, redButtonIndex给`-1`即可, defColor 特殊颜色的按钮索引
 - (instancetype)initWithTitle:(NSString *)title buttonTitles:(NSArray *)titles redButtonIndex:(int)buttonIndex defColor:(NSArray *)indexs delegate:(id<MRJActionSheetDelegate>)delegate;
 
-/// 初始化方法给定回调事件
+/// 初始化方法给定回调事件  如果没有红色按钮, redButtonIndex给`-1`即可
 - (instancetype)initWithTitle:(NSString *)title buttonTitles:(NSArray *)titles redButtonIndex:(int)buttonIndex defColor:(NSArray *)indexs actionSheetClickBlock:(MRJActionSheetBlock)actionSheetClickBlock;
 
 /// 透明度显示

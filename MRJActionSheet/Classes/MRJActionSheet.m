@@ -44,6 +44,7 @@
                      defColor:(NSArray *)indexs
                      delegate:(id<MRJActionSheetDelegate>)delegate
         actionSheetClickBlock:(MRJActionSheetBlock)actionSheetClickBlock {
+    
     if (self = [super init]) {
         self.mrjdelegate = delegate;
         self.mrjActionSheetClickBlock = actionSheetClickBlock;
@@ -62,6 +63,7 @@
         bottomView.backgroundColor = [UIColor colorWithHexString:@"f6f6f6"];//LCColor(242, 242, 242);
         [self addSubview:bottomView];
         _bottomView = bottomView;
+        
         if (title) {
             /// 标题
             UILabel *label = [[UILabel alloc] init];
@@ -117,6 +119,7 @@
                 [bottomView addSubview:line];
             }
         }
+        
         // 取消按钮
         UIButton *cancelBtn = [[UIButton alloc] init];
         cancelBtn.tag = titles.count + 1000;
@@ -188,7 +191,7 @@
                      } completion:nil];
 }
 
-///完整显示
+/// 完整显示
 - (void)show {
     [self showWithDarkness:0.4];
 }
@@ -200,13 +203,12 @@
     return NO;
 }
 
-///添加特殊的选择栏目
+/// 添加特殊的选择栏目
 - (void)addDetailText:(NSString *)detailText atIndex:(NSInteger)index {
    UIButton *btn = [_bottomView viewWithTag:index];
       [btn.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
    NSMutableAttributedString *title = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@\n%@",[btn titleForState:UIControlStateNormal],detailText]];
     [title addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:10] range:[title.string rangeOfString:detailText]];
-//    [title addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x999999) range:[title.string rangeOfString:detailText]];
     [btn setAttributedTitle:title forState:UIControlStateNormal];
 }
 
