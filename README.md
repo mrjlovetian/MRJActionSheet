@@ -9,7 +9,14 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+
+```
+MRJActionSheet *sheet = [[MRJActionSheet alloc] initWithTitle:@"标题" buttonTitles:@[@"第一", @"第二", @"第三", @"第四"] redButtonIndex:-1 defColor:nil actionSheetClickBlock:^(MRJActionSheet *actionSheet, int buttonIndex) {
+    }];
+    [sheet show];
+```
+
+![](actionSheet.png)
 
 ## Installation
 
@@ -28,3 +35,5 @@ mrjlovetian@gmail.com, mrjyuhongjiang@gmail.com
 
 MRJActionSheet is available under the MIT license. See the LICENSE file for more info.
 # MRJActionSheet
+
+

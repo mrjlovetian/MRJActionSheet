@@ -113,10 +113,15 @@
             for (int i = 0; i < titles.count; i++) {
                 // 所有线条
                 CGFloat lineY = (i + (title ? 1 : 0)) * BUTTON_HEIGHT;
-                UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, lineY, [UIScreen mainScreen].bounds.size.width, 0.5f)];
-                line.backgroundColor = [UIColor colorWithHexString:@"e5e5e5"];//LCColor(225, 225, 225);
-                line.contentMode = UIViewContentModeCenter;
-                [bottomView addSubview:line];
+                
+                CALayer *lineLayer = [CALayer layer];
+                lineLayer.frame = CGRectMake(0, lineY, [UIScreen mainScreen].bounds.size.width, 0.5f);
+                lineLayer.backgroundColor = [UIColor colorWithHexString:@"e5e5e5"].CGColor;
+                [bottomView.layer addSublayer:lineLayer];
+//                UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, lineY, [UIScreen mainScreen].bounds.size.width, 0.5f)];
+//                line.backgroundColor = [UIColor colorWithHexString:@"e5e5e5"];//LCColor(225, 225, 225);
+//                line.contentMode = UIViewContentModeCenter;
+//                [bottomView addSubview:line];
             }
         }
         
@@ -127,7 +132,6 @@
         cancelBtn.titleLabel.font = [UIFont systemFontOfSize:16];
         [cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
         [cancelBtn setTitleColor:[UIColor colorWithHexString:@"333333"] forState:UIControlStateNormal];
-//        [cancelBtn setBackgroundImage:[UIImage imageWithColor:UIColorFromRGB(0xdddddd) size:CGSizeMake(1, 1)] forState:UIControlStateHighlighted];
         [cancelBtn addTarget:self action:@selector(didClickCancelBtn) forControlEvents:UIControlEventTouchUpInside];
         CGFloat btnY = BUTTON_HEIGHT * (titles.count + (title ? 1 : 0)) + 10.0f;
         cancelBtn.frame = CGRectMake(0, btnY, [UIScreen mainScreen].bounds.size.width, BUTTON_HEIGHT);

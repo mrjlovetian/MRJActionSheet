@@ -20,16 +20,16 @@
     [super viewDidLoad];
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake(69, 69, 69, 69);
+    btn.frame = CGRectMake(69, 69, 169, 69);
     [btn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
-    btn.backgroundColor = [UIColor redColor];
+    [btn setTitle:@"选择日期" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.view addSubview:btn];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)click{
     MRJActionSheet *sheet = [[MRJActionSheet alloc] initWithTitle:@"标题" buttonTitles:@[@"第一", @"第二", @"第三", @"第四"] redButtonIndex:-1 defColor:nil actionSheetClickBlock:^(MRJActionSheet *actionSheet, int buttonIndex) {
-        NSLog(@"-=-=-=-=-=-=-=-%@-=-=-=-=-=-=-%d", actionSheet, buttonIndex);
     }];
     [sheet show];
 }
