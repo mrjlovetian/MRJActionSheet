@@ -113,15 +113,10 @@
             for (int i = 0; i < titles.count; i++) {
                 // 所有线条
                 CGFloat lineY = (i + (title ? 1 : 0)) * BUTTON_HEIGHT;
-                
                 CALayer *lineLayer = [CALayer layer];
                 lineLayer.frame = CGRectMake(0, lineY, [UIScreen mainScreen].bounds.size.width, 0.5f);
                 lineLayer.backgroundColor = [UIColor colorWithHexString:@"e5e5e5"].CGColor;
                 [bottomView.layer addSublayer:lineLayer];
-//                UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, lineY, [UIScreen mainScreen].bounds.size.width, 0.5f)];
-//                line.backgroundColor = [UIColor colorWithHexString:@"e5e5e5"];//LCColor(225, 225, 225);
-//                line.contentMode = UIViewContentModeCenter;
-//                [bottomView addSubview:line];
             }
         }
         
