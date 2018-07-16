@@ -22,26 +22,26 @@
 
 @implementation MRJActionSheet
 
-// /设置代理回调方法
+/// 设置代理回调方法
 - (instancetype)initWithTitle:(NSString *)title
-                 buttonTitles:(NSArray *)titles
+                 buttonTitles:(NSArray <NSString *>*)titles
                redButtonIndex:(int)buttonIndex
-                     defColor:(NSArray *)indexs
+                     defColor:(NSArray <NSString *>*)indexs
                      delegate:(id<MRJActionSheetDelegate>)delegate {
     return [self initWithTitle:title titleColor:[UIColor colorWithHexString:@"333333"] buttonTitles:titles redButtonIndex:buttonIndex defColor:indexs delegate:delegate actionSheetClickBlock:nil];
 }
 
 /// 有block 回调的方法
-- (instancetype)initWithTitle:(NSString *)title buttonTitles:(NSArray *)titles redButtonIndex:(int)buttonIndex defColor:(NSArray *)indexs actionSheetClickBlock:(MRJActionSheetBlock)actionSheetClickBlock {
+- (instancetype)initWithTitle:(NSString *)title buttonTitles:(NSArray <NSString *>*)titles redButtonIndex:(int)buttonIndex defColor:(NSArray <NSString *>*)indexs actionSheetClickBlock:(MRJActionSheetBlock)actionSheetClickBlock {
     return [self initWithTitle:title titleColor:[UIColor colorWithHexString:@"333333"] buttonTitles:titles redButtonIndex:buttonIndex defColor:indexs delegate:nil actionSheetClickBlock:actionSheetClickBlock];
 }
 
 /// 最顶部的方法
 - (instancetype)initWithTitle:(NSString *)title
                    titleColor:(UIColor *)titleColor
-                 buttonTitles:(NSArray *)titles
+                 buttonTitles:(NSArray <NSString *>*)titles
                redButtonIndex:(int)buttonIndex
-                     defColor:(NSArray *)indexs
+                     defColor:(NSArray <NSString *>*)indexs
                      delegate:(id<MRJActionSheetDelegate>)delegate
         actionSheetClickBlock:(MRJActionSheetBlock)actionSheetClickBlock {
     
@@ -75,6 +75,7 @@
             label.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, BUTTON_HEIGHT);
             [bottomView addSubview:label];
         }
+        
         if (titles.count) {
             _buttonTitles = titles;
             for (int i = 0; i < titles.count; i++) {
@@ -110,6 +111,7 @@
                 btn.frame = CGRectMake(0, btnY, [UIScreen mainScreen].bounds.size.width, BUTTON_HEIGHT);
                 [bottomView addSubview:btn];
             }
+            
             for (int i = 0; i < titles.count; i++) {
                 // 所有线条
                 CGFloat lineY = (i + (title ? 1 : 0)) * BUTTON_HEIGHT;
